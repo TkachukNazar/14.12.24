@@ -12,11 +12,24 @@ function checkPalindrom(arr) {
   let palindroms1 = [];
   for (let i = 0; i < arr.length; i++) {
     console.log(
-      arr[i].toLowerCase().replaceAll(" ", "").split("").join("") ==
+      arr[i]
+        .toLowerCase()
+        .replaceAll(" ", "")
+        .replaceAll("?", "")
+        .replaceAll(".", "")
+        .replaceAll("!", "")
+        .replaceAll(",", "")
+        .replaceAll("-", "")
+        .split("")
+        .join("") ==
         arr[i]
           .toLowerCase()
           .replaceAll(" ", "")
           .replaceAll("?", "")
+          .replaceAll(".", "")
+          .replaceAll("!", "")
+          .replaceAll(",", "")
+          .replaceAll("-", "")
           .split("")
           .reverse()
           .join("")
@@ -26,12 +39,20 @@ function checkPalindrom(arr) {
         .toLowerCase()
         .replaceAll(" ", "")
         .replaceAll("?", "")
+        .replaceAll("!", "")
+        .replaceAll(".", "")
+        .replaceAll(",", "")
+        .replaceAll("-", "")
         .split("")
         .join("") ==
       arr[i]
         .toLowerCase()
         .replaceAll(" ", "")
         .replaceAll("?", "")
+        .replaceAll("!", "")
+        .replaceAll(".", "")
+        .replaceAll(",", "")
+        .replaceAll("-", "")
         .split("")
         .reverse()
         .join("")
